@@ -22,46 +22,40 @@ body {
 
 div.content {
     margin-left: 0%;
+    margin-right: 0%;
     padding: 0px 0px;
+}
+
+#menu {
+    float: right;
+    width: 220px;
 }
 
 ul.sidenav {
     list-style-type: none;
     margin-top: 230px;
-    margin-left: 0px;
-    padding: 0px 0px;
-    width: 20%;
-    background-color: #000000;
+    padding: 0px 0px 0px 0px;
+    width: inherit;
+    background-color: transparent;
     position: fixed;
     height: 100%;
-    overflow: auto;
+    overflow: auto;    
 }
 
 ul.sidenav li a {
     display: block;
+    text-align: right;    
     color: white;
     padding: 8px 50px;
     text-decoration: none;
-    background-position: 15px;
-    background-padding: 15px;
+    background-position: 93%;
     background-repeat: no-repeat;
 }
 
-a.link-facebook {
-    background:url(fb-icon.gif);   
-}
-
-a.link-youtube {
-    background:url(yt-icon.gif);
-}
-
-a.link-soundcloud {
-    background:url(sc-icon.gif);
-}
-
-a.link-mail {
-    background:url(mail-icon.gif);
-}
+a.link-facebook {     background:url(fb-icon.gif);   }
+a.link-youtube {    background:url(yt-icon.gif);    }
+a.link-soundcloud {    background:url(sc-icon.gif);    }
+a.link-mail {    background:url(mail-icon.gif);     }
 
 ul.sidenav li a.active {
     background-color: #4CAF50;
@@ -73,24 +67,15 @@ ul.sidenav li a:hover:not(.active) {
     color: lightblue;
 }
 
-@media screen and (max-width: 900px){
-    ul.sidenav {
-        padding: 0px 0px 0px 0px;
-        width:100%;
-        height:auto;
-        position:relative;        
+@media screen and (max-width: 600px){
+    #menu {
+        float: initial;
+        width: 100%;
+    }
+    ul.sidenav {        
+        position:relative;
         margin: 0px auto 0px auto;
     }
-    ul.sidenav li a {
-        display: inline-block;
-        width: 70px;
-        float: left;
-        text-align: center;
-    }
-    div.content {margin-left:0;}
-}
-
-@media screen and (max-width: 700px){
     ul.sidenav li a {
         display: block;
         text-align: center;
@@ -144,21 +129,23 @@ a {
         <audio id="layer">
             <source src="rem.mp3"></source>
         </audio>
-        
-        <div class="menu">
+        <div id="menu">
             <ul class="sidenav">
-                <li><a class="link-facebook" href="https://www.facebook.com/johnghostmusic">FACEBOOK</a></li>
-                <li><a class="link-youtube" href="https://www.youtube.com/channel/UCrVYNjgbK9peaCRxrRlARcA">YOUTUBE</a></li>
-                <li><a class="link-soundcloud" href="https://soundcloud.com/john_ghost">SOUNDCLOUD</a></li>
+                <li><a class="link-facebook" href="https://www.facebook.com/johnghostmusic"
+                        >FACEBOOK</a></li>
+                <li><a class="link-youtube"
+                        href="https://www.youtube.com/channel/UCrVYNjgbK9peaCRxrRlARcA"
+                    >YOUTUBE</a></li>
+                <li><a class="link-soundcloud" href="https://soundcloud.com/john_ghost"
+                        >SOUNDCLOUD</a></li>
                 <li><a class="link-mail" href="mailto:info@johnghost.be">CONTACT</a></li>
             </ul>
         </div>
-        
         <div class="content">
-            <img class="background" src="y12_22_OPTI.gif" alt="John Ghost" onclick="document.getElementById('layer').play()"
-                style="width:600px;height:600px;" />
+            <img class="background" src="y12_22_OPTI.gif" alt="John Ghost"
+                onclick="document.getElementById('layer').play()" style="width:600px;height:600px;"
+             />
         </div>
-        
         <div id="grad" class="footer">
             <p>BOOKING: Lobke van <a href="http://bisbookings.be/bands/john-ghost/">Bis
                 Bookings</a>, <a href="mailto:johnghost@bisbookings.com"
