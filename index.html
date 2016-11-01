@@ -67,6 +67,47 @@ ul.sidenav li a:hover:not(.active) {
     color: lightblue;
 }
 
+img.background {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+div.footer {
+    background: #191516; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(transparent, #191516); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(transparent, #191516); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(transparent, #191516); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(transparent, #191516); /* Standard syntax */
+    position: fixed;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    padding: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 19px;
+    height: auto !important;
+    height: 10%;
+    color: #FFF;
+}
+
+#booking { 
+    margin-bottom: 0px;
+    position: bottom; 
+    bottom: 0; 
+    width: 100%;
+    text-align: center;
+    font-size: 70%;
+    color: #EDC8D0;
+    
+}
+
+a {
+	color: #FFF;
+}
+
 @media screen and (max-width: 600px){
     #menu {
         float: initial;
@@ -82,45 +123,8 @@ ul.sidenav li a:hover:not(.active) {
         float: none;
         width: initial;
     }
-}
-
-img.background {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
-}
-
-div.footer {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 19px;
-    text-align: center;
-    color: #FFF;
-    margin: 0px auto 0px auto;
-}
-
-p {
-    line-height: 0;
-    font-size: 11px;
-    color: #EDC8D0;
-}
-
-#grad {
-    background: #191516; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(black, #191516); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(black, #191516); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(black, #191516); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(black, #191516); /* Standard syntax */
-}
-
-a {
-	color: #FFF;
-}
-
-	   </style>
+    }
+	  </style>
     </head>
     <body>
         <audio id="start" autoplay="autoplay" loop="loop">
@@ -146,9 +150,9 @@ a {
                 onclick="document.getElementById('layer').play()" style="width:600px;height:600px;"
              />
         </div>
-        <div id="grad" class="footer">
-            <p>BOOKING: Lobke van <a href="http://bisbookings.be/bands/john-ghost/">Bis
-                Bookings</a>, <a href="mailto:johnghost@bisbookings.com"
+        <div class="footer">
+            <p id="booking">BOOKING: Lobke van <a href="http://bisbookings.be/bands/john-ghost/">Bis
+                    Bookings</a>, <a href="mailto:johnghost@bisbookings.com"
                     >johnghost@bisbookings.com</a>, +32(0)485 80 61 02</p>
         </div>
     </body>
