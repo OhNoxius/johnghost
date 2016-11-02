@@ -126,7 +126,8 @@ a {
                     var source = document.getElementById('audio_src');
                     var myArray = ['rem.mp3', 'rem2.mp3', 'habitat.mp3', 'entree1.mp3', 'entree2.mp3'];   
                     var rand = myArray[Math.floor(Math.random() * myArray.length)];
-                    <!--document.getElementById('audio_src').setAttribute('src', rand);-->
+                    <!--
+                document.getElementById('audio_src').setAttribute('src', rand);//-->
                     source.src = 'audio/' + rand;
                     audio.load();
                     audio.play();
@@ -163,7 +164,7 @@ a {
         </div>
         <div class="content">
             <img class="background" id="john_static" src="y12_22_OPTI.gif" alt="John Ghost"
-                onclick="document.getElementById('audio_layer').play()" style="width:600px;height:600px;" />
+                style="width:600px;height:600px;" />
         </div>
         <div class="footer">
             <p id="booking">BOOKING: Lobke van <a href="http://bisbookings.be/bands/john-ghost/">Bis
