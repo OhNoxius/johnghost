@@ -3,15 +3,7 @@
     <head>
         <title>JOHN GHOST</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta NAME="description" LANG="NL" CONTENT="" />
-        <meta NAME="keywords" LANG="NL" CONTENT="Array"><meta property="og:title"
-                content="JOHN GHOST - Home" />
-            <meta property="og:url" content="http://www.johnghost.be/" />
-            <meta property="og:description" content="" />
-            <meta property="og:image" content="" />
-            <meta property="og:site_name" content="John Ghost" />
-        </meta>
-        <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon" />
         <style>
 
 body {
@@ -52,10 +44,10 @@ ul.sidenav li a {
     background-repeat: no-repeat;
 }
 
-a.link-facebook {     background:url(fb-icon.gif);   }
-a.link-youtube {    background:url(yt-icon.gif);    }
-a.link-soundcloud {    background:url(sc-icon.gif);    }
-a.link-mail {    background:url(mail-icon.gif);     }
+a.link-facebook {     background:url(icons/fb-icon.gif);   }
+a.link-youtube {    background:url(icons/yt-icon.gif);    }
+a.link-soundcloud {    background:url(icons/sc-icon.gif);    }
+a.link-mail {    background:url(icons/mail-icon.gif);     }
 
 ul.sidenav li a.active {
     background-color: #4CAF50;
@@ -124,31 +116,54 @@ a {
         width: initial;
     }
     }
-	  </style>
+        </style>
+
+        <script type="text/javascript">
+            window.onload = function () {
+            
+                document.getElementById('john_static').addEventListener('click', function () {
+                    var audio = document.getElementById('audio_layer');  
+                    var source = document.getElementById('audio_src');
+                    var myArray = ['rem.mp3', 'rem2.mp3', 'habitat.mp3', 'entree1.mp3', 'entree2.mp3'];   
+                    var rand = myArray[Math.floor(Math.random() * myArray.length)];
+                    <!--document.getElementById('audio_src').setAttribute('src', rand);-->
+                    source.src = 'audio/' + rand;
+                    audio.load();
+                    audio.play();
+                },
+                false);            
+               
+            };
+            
+        </script>
+
     </head>
+
     <body>
-        <audio id="start" autoplay="autoplay" loop="loop">
-            <source src="ENTREE_record.mp3" type="audio/mpeg"></source>
-        </audio>
-        <audio id="layer">
-            <source src="rem.mp3"></source>
-        </audio>
+        <div id="audio">
+            <audio id="audio_background" autoplay="autoplay" loop="loop">
+                <source src="audio/ENTREE_record.mp3" type="audio/mpeg"></source>
+            </audio>
+            <audio id="audio_layer">
+                <source id="audio_src" type="audio/mpeg"></source>
+            </audio>
+        </div>
         <div id="menu">
             <ul class="sidenav">
                 <li><a class="link-facebook" href="https://www.facebook.com/johnghostmusic"
-                        >FACEBOOK</a></li>
+                        target="_blank">FACEBOOK</a></li>
                 <li><a class="link-youtube"
                         href="https://www.youtube.com/channel/UCrVYNjgbK9peaCRxrRlARcA"
-                    >YOUTUBE</a></li>
+                        target="_blank">YOUTUBE</a></li>
                 <li><a class="link-soundcloud" href="https://soundcloud.com/john_ghost"
-                        >SOUNDCLOUD</a></li>
-                <li><a class="link-mail" href="mailto:info@johnghost.be">CONTACT</a></li>
+                        target="_blank">SOUNDCLOUD</a></li>
+                <li><a class="link-mail" href="mailto:info@johnghost.be" target="_blank"
+                    >CONTACT</a></li>
             </ul>
         </div>
         <div class="content">
-            <img class="background" src="y12_22_OPTI.gif" alt="John Ghost"
-                onclick="document.getElementById('layer').play()" style="width:600px;height:600px;"
-             />
+            <img class="background" id="john_static" src="y12_22_OPTI.gif" alt="John Ghost"
+                onclick="document.getElementById('audio_layer').play()" style="width:600px;height:600px;" />
         </div>
         <div class="footer">
             <p id="booking">BOOKING: Lobke van <a href="http://bisbookings.be/bands/john-ghost/">Bis
