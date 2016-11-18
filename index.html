@@ -124,7 +124,7 @@ a {
                 document.getElementById('john_static').addEventListener('click', function () {
                     var audio = document.getElementById('audio_layer');  
                     var source = document.getElementById('audio_src');
-                    var myArray = ['rem.mp3', 'rem2.mp3', 'habitat.mp3', 'entree1.mp3', 'entree2.mp3'];   
+                    var myArray = ['rem.mp3', 'rem2.mp3', 'habitat.mp3', 'entree1.mp3', 'entree2.mp3', 'borderland.mp3'];   
                     var rand = myArray[Math.floor(Math.random() * myArray.length)];
                     <!--
                 document.getElementById('audio_src').setAttribute('src', rand);//-->
@@ -146,7 +146,7 @@ a {
                 <source src="audio/ENTREE_record.mp3" type="audio/mpeg"></source>
             </audio>
             <audio id="audio_layer">
-                <source id="audio_src" type="audio/mpeg"></source>
+                <source src="samples/borderland.mp3" id="audio_src" type="audio/mpeg"></source>
             </audio>
         </div>
         <div id="menu">
