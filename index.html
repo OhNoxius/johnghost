@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html style="height: 100%">
-    <head>
-        <title>JOHN GHOST</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon" />
-        <style>
+	<head>
+		<title>JOHN GHOST</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="icons/logo.ico" type="image/x-icon" />
+		<style>
 
 body {
     margin: 0;
@@ -27,7 +27,10 @@ div.content {
 
 ul.sidenav {
     list-style-type: none;
-    margin-top: 230px;
+    position: fixed;
+  	top: 40%;
+  /* bring your own prefixes */
+  	transform: translate(-5%, -0%);
     padding: 0px 0px 0px 0px;
     width: inherit;
     background-color: transparent;
@@ -120,7 +123,7 @@ a {
     }
         </style>
 
-        <script type="text/javascript">
+		<script type="text/javascript">
             window.onload = function () {
             
                 document.getElementById('john_static').addEventListener('click', function () {
@@ -128,42 +131,42 @@ a {
                     var source = document.getElementById('audio_src');
                     var myArray = ['rem.mp3', 'rem2.mp3', 'habitat.mp3', 'entree1.mp3', 'entree2.mp3', 'borderland.mp3'];   
                     var rand = myArray[Math.floor(Math.random() * myArray.length)];
-                    <!--
-                document.getElementById('audio_src').setAttribute('src', rand);//-->
+                    
+				document.getElementById('audio_src').setAttribute('src', rand);
                     source.src = 'audio/' + rand;
                     audio.load();
                     audio.play();
                 },
-                false);            
+                false);
                
             };
             
         </script>
 
-    </head>
+	</head>
 
-    <body>
-        <div id="audio">
-            <audio id="audio_background" autoplay="autoplay" loop="loop">
-                <source src="audio/ENTREE_record.mp3" type="audio/mpeg"></source>
-            </audio>
-            <audio id="audio_layer">
-                <source src="samples/borderland.mp3" id="audio_src" type="audio/mpeg"></source>
-            </audio>
-        </div>
-        <div id="menu">
-            <ul class="sidenav">
-                <li><a class="link-facebook" href="https://www.facebook.com/johnghostmusic" target="_blank">FACEBOOK</a></li>
-                <li><a class="link-youtube" href="https://www.youtube.com/channel/UCrVYNjgbK9peaCRxrRlARcA" target="_blank">YOUTUBE</a></li>
-                <li><a class="link-soundcloud" href="https://soundcloud.com/john_ghost" target="_blank">SOUNDCLOUD</a></li>
-                <li><a class="link-mail" href="mailto:info@johnghost.be" target="_blank">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="content">
-            <img class="background" id="john_static" src="HEAD_CLEAN_trans_6_LOSSY.gif" alt="John Ghost" style="height:95%; padding:1%;" />
-        </div>
-        <div class="footer">
-            <p id="booking">mngmt: <a href="http://art-spot.be/john-ghost" target="_blank">Art-Spot</a>, <a href="mailto:info@johnghost.be">info@johnghost.be</a>, +32(0)485 56 85 15</p>
-        </div>
-    </body>
+	<body>
+		<div id="audio">
+			<audio id="audio_background" autoplay="autoplay" loop="loop">
+				<source src="audio/ENTREE_record.mp3" type="audio/mpeg"></source>
+			</audio>
+			<audio id="audio_layer">
+				<source src="samples/borderland.mp3" id="audio_src" type="audio/mpeg"></source>
+			</audio>
+		</div>
+		<div id="menu">
+			<ul class="sidenav">
+				<li><a class="link-facebook" href="https://www.facebook.com/johnghostmusic" target="_blank">FACEBOOK</a></li>
+				<li><a class="link-youtube" href="https://www.youtube.com/channel/UCrVYNjgbK9peaCRxrRlARcA" target="_blank">YOUTUBE</a></li>
+				<li><a class="link-soundcloud" href="https://soundcloud.com/john_ghost" target="_blank">SOUNDCLOUD</a></li>
+				<li><a class="link-mail" href="mailto:info@johnghost.be" target="_blank">CONTACT</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<img class="background" id="john_static" src="HEAD_CLEAN_trans_6_LOSSY.gif" alt="John Ghost" style="height:95%; padding:1%;" />
+		</div>
+		<div class="footer">
+			<p id="booking">mngmt: <a href="http://art-spot.be/john-ghost" target="_blank">ART-SPOT.BE</a>. booking: <a href="mailto:voxconcerts@skynet.be?subject=Booking JOHN GHOST (via ART-SPOT.BE)">Dieter Craeye</a> - <a href="https://www.facebook.com/voxbookings/" target="_blank">Vox Concerts</a></p>
+		</div>
+	</body>
 </html>
