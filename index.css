@@ -80,11 +80,13 @@ a.link-mail {
 
 img.background {
     display: block;
-    /* height: 80%;
+    mix-blend-mode: screen;
+    /* opacity: 75%; */
     padding: 1%;
     margin: auto;
+    /* margin-top: 40%; */
+    height: 95%;
     /* background-image: url("/HEAD_CLEAN_trans_6_LOSSY.gif"); */
-
 }
 
 div.background {
@@ -92,10 +94,12 @@ div.background {
     /* justify-content: center;
     align-items: center; */
     height: 100%;
-    background-image: url(/HEAD_CLEAN_trans_6_LOSSY.gif);
+    /* background-image: url(/HEAD_CLEAN_trans_6_LOSSY.gif); */
+    background-image: url('/_36_0273.jpg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 80vh;
+    background-size: cover;
+    /* background-size: 80vh; */
 }
 
 div.footer {
