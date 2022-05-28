@@ -41,23 +41,6 @@ ul.sidenav li a {
     background-repeat: no-repeat;
 }
 
-a.link-facebook {
-    background: url(icons/fb-icon.gif);
-}
-
-a.link-youtube {
-    background: url(icons/yt-icon.gif);
-}
-
-/*a.link-soundcloud {    background:url(icons/sc-icon.gif);    }*/
-a.link-spotify {
-    background: url(icons/spotify-icon.gif);
-}
-
-a.link-mail {
-    background: url(icons/mail-icon.gif);
-}
-
 ul.sidenav li a.active {
     background-color: #4CAF50;
     color: white;
@@ -68,11 +51,37 @@ ul.sidenav li a:hover:not(.active) {
     color: lightblue;
 }
 
+a.link-facebook {
+    background: url(icons/fb-icon.gif);
+}
+
+a.link-youtube {
+    background: url(icons/yt-icon.gif);
+}
+
+a.link-spotify {
+    background: url(icons/spotify-icon.gif);
+}
+a.link-instagram {
+    background: url(icons/Instagram_logo_2016.svg);
+    background-size: 24px;
+}
+
+a.link-mail {
+    background: url(icons/mail-icon.gif);
+}
+
+
 img.background {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: auto;
+    height: 80%;
+    padding: 1%;
+}
+
+div.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 div.footer {
