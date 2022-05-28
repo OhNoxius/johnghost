@@ -17,6 +17,12 @@ div.content {
     width: 220px;
 }
 
+#audio {
+    float: left;
+    position: fixed;
+    top: 30%;
+}
+
 ul.sidenav {
     list-style-type: none;
     position: fixed;
@@ -26,7 +32,6 @@ ul.sidenav {
     padding: 0px 0px 0px 0px;
     width: inherit;
     background-color: transparent;
-    position: fixed;
     height: 100%;
     overflow: auto;
 }
@@ -62,6 +67,7 @@ a.link-youtube {
 a.link-spotify {
     background: url(icons/spotify-icon.gif);
 }
+
 a.link-instagram {
     background: url(icons/Instagram_logo_2016.svg);
     background-size: 24px;
@@ -73,15 +79,23 @@ a.link-mail {
 
 
 img.background {
-    height: 80%;
+    display: block;
+    /* height: 80%;
     padding: 1%;
+    margin: auto;
+    /* background-image: url("/HEAD_CLEAN_trans_6_LOSSY.gif"); */
+
 }
 
 div.background {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    /* justify-content: center;
+    align-items: center; */
     height: 100%;
+    background-image: url(/HEAD_CLEAN_trans_6_LOSSY.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80vh;
 }
 
 div.footer {
